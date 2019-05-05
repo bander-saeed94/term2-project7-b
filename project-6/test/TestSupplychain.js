@@ -71,11 +71,8 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferOne[6], originFarmLatitude, 'Error: Missing or Invalid originFarmLatitude')
         assert.equal(resultBufferOne[7], originFarmLongitude, 'Error: Missing or Invalid originFarmLongitude')
         assert.equal(resultBufferTwo[5], 0, 'Error: Invalid item State')
-        assert.equal(result.logs[0].event, "Harvested", 'Error: Invalid item State')
-
-        // result.logs[0].event
-        // assert.equal(eventEmitted, true, 'Invalid event emitted')        
-    })    
+        assert.equal(result.logs[0].event, "Harvested", 'Error: Invalid item State')        
+    }) ;   
 
     // 2nd Test
     it("Testing smart contract function processItem() that allows a farmer to process coffee", async() => {
