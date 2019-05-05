@@ -49,10 +49,10 @@ contract('SupplyChain', function(accounts) {
         // var eventEmitted = false
         
         // Watch the emitted event Harvested()
-        // var event = supplyChain.events.Harvested()
-        // await event.watch((err, res) => {
-        //     eventEmitted = true
-        // })
+        var event = supplyChain.events.Harvested();
+        await event.watch((err, res) => {
+            eventEmitted = true
+        });
 
         // Mark an item as Harvested by calling function harvestItem()
         let result = await supplyChain.harvestItem(upc, originFarmerID, originFarmName, originFarmInformation, originFarmLatitude, originFarmLongitude, productNotes)
